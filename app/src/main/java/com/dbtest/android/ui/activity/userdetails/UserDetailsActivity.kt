@@ -402,20 +402,22 @@ class UserDetailsActivity : AppCompatActivity(), OnMapReadyCallback, LocationLis
     }
 
     override fun onLocationChanged(location: Location) {
-        val latLng = LatLng(location.latitude, location.longitude)
-        latitude = latLng.latitude
-        longitude = latLng.latitude
-        mMap.clear()
-        mMap.addMarker(MarkerOptions().position(latLng).title("Current Location"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
+        if(location!=null){
+            val latLng = LatLng(location.latitude, location.longitude)
+            latitude = latLng.latitude
+            longitude = latLng.latitude
+            mMap.clear()
+            mMap.addMarker(MarkerOptions().position(latLng).title("Current Location"))
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
+        }
     }
 
     override fun onProviderDisabled(provider: String) {
-        super.onProviderDisabled(provider)
+
     }
 
     override fun onProviderEnabled(provider: String) {
-        super.onProviderEnabled(provider)
+
     }
 
     override fun onRequestPermissionsResult(

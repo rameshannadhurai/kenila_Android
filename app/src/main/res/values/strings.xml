@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kenil Android</string>
+
+    <string name="unknown_host_exception">Please check your network connection!.</string>
+    <string name="your_in_offline">You are in offline!.</string>
+    <string name="bad_request">Invalid request</string>
+    <string name="parser_exception">Data parsing issue</string>
+    <string name="internal_server_exception">Internal server error</string>
+    <string name="un_caught_exception">Something went wrong!</string>
+    <string name="user_id">User ID</string>
+</resources>
